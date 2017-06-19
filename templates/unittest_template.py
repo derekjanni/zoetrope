@@ -1,5 +1,6 @@
 def headers(module):
-    return 'import unittest\n' + "\n".join(("import {0}".format(x.__name__) for x in module.dependencies)) + "\n"
+    return 'import unittest\n' + 'import mock\n' + \
+    "\n".join(("import {0}".format(x.__name__) for x in module.dependencies)) + "\n"
 
 def function_test(function, indentation=0):
     return """

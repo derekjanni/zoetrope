@@ -3,7 +3,6 @@ import types
 import sys
 import os
 import re
-from pprint import pprint
 import templates.unittest_template as unittest_template
 
 class Module(object):
