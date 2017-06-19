@@ -5,6 +5,7 @@ by typing:
 
 ```python
 zoetrope "relative_path/to/my/file.py"
+zoetrope "pythonic.path.to.my.file"
 ```
 
 The result is that zoetrope will print something like:
@@ -29,7 +30,11 @@ class TestClass(unittest.TestCase): # a class contained in the target module
 
 ```
 
+There is a hidden assumption that *your code will already run locally* - zoetrope
+will fail if you try to generate tests for files which have ImportErrors or other
+errors in them. Additionally, any relative path that uses `../` will not work.
+
 ## Future Development
 
-This framework is fairly customizable and it is simple to make templates
-for pytest or other unittesting frameworks
+1. Pytest functionality
+2. Better relative path support/hacks
