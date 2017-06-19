@@ -5,7 +5,7 @@ setup(
     version='0.1',
     description='A templating tool that creates unit tests from an arbitrary file.',
     packages=find_packages(),
-    scripts=['zoetrope/zoetrope']
+    scripts=['zoetrope/zoetrope'],
     install_requires=[
         'mock'
     ]

@@ -1,9 +1,11 @@
+#!/usr/bin/env python
+
 import argparse
 import types
 import sys
 import os
 import re
-import templates.unittest_template as unittest_template
+import zoetrope.templates.unittest_template as unittest_template
 
 class Module(object):
     def __init__(
