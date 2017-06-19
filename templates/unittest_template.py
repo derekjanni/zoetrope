@@ -8,7 +8,7 @@ def function_test(function, indentation=0):
     """.format(function.__name__)
 
 def class_test(_class, indentation=0):
-    return """def class Test{0}(unittest.TestCase):
+    return """class Test{0}(unittest.TestCase):
     """.format(_class[0].upper() + _class[1:])
 
 def main():
