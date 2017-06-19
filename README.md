@@ -19,7 +19,6 @@ class TestModule(unittest.TestCase): # tests for module methods
     def test_a_function(): # will use name of function in place of 'a_function'
         pass
 
-
     def test_2():
         pass
 
@@ -30,7 +29,7 @@ class TestClass(unittest.TestCase): # a class contained in the target module
 
 ```
 
-There is a hidden assumption that *your code will already run locally* - zoetrope
+There is a hidden assumption that *your code will already run locally* - `zoetrope`
 will fail if you try to generate tests for files which have ImportErrors or other
 errors in them. Additionally, any relative path that uses `../` will not work.
 
