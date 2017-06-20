@@ -4,7 +4,7 @@ def headers(module):
 
 def function_test(function, indentation=0):
     return """
-    def test_{0}():
+    def test_{0}(self):
         pass
     """.format(function.__name__)
 
