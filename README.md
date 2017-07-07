@@ -16,15 +16,15 @@ import a_custom_class
 
 class TestModule(unittest.TestCase): # tests for module methods
 
-    def test_a_function(): # will use name of function in place of 'a_function'
+    def test_a_function(self): # will use name of function in place of 'a_function'
         pass
 
-    def test_2():
+    def test_2(self):
         pass
 
 class TestClass(unittest.TestCase): # a class contained in the target module
 
-    def test_a_function(): # tests a class method or instance method
+    def test_a_function(self): # tests a class method or instance method
         pass
 
 ```
@@ -37,3 +37,4 @@ errors in them. Additionally, any relative path that uses `../` will not work.
 
 1. Pytest functionality
 2. Better relative path support/hacks
+3. Mocks for specific calls made to external modules
