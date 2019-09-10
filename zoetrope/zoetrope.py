@@ -52,7 +52,7 @@ class Module(object):
     @property
     def module(self):
         if not self._module:
-            self._module = __import__(module.python_path, globals(), locals(), [module.name], -1)
+            self._module = __import__(module.python_path, globals(), locals(), [module.name], 0)
         return self._module
 
     @property
@@ -133,19 +133,19 @@ class Module(object):
 
 def create_test_stub(module):
     module.get_elements()
-    print unittest_template.headers(module)
-    print unittest_template.class_test(module.name, indentation=0)
+    print(unittest_template.headers(module))
+    print(unittest_template.class_test(module.name, indentation=0))
     for x in module.functions:
-        print unittest_template.function_test(x, indentation=1)
+        print(unittest_template.function_test(x, indentation=1))
 
     for _class in module.classes:
-        print unittest_template.class_test(_class.__name__, indentation=0)
+        print(unittest_template.class_test(_class.__name__, indentation=0))
         for x in _class.__dict__:
             x = _class.__dict__.get(x)
             if isinstance(x, types.FunctionType):
-                 print unittest_template.function_test(x, indentation=1)
+                 print(unittest_template.function_test(x, indentation=1))
 
-    print unittest_template.main()
+    print(unittest_template.main())
 
 
 def pathify(path):
